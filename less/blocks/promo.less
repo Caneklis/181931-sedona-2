@@ -1,10 +1,14 @@
 .promo {
+  position: relative;
+  z-index: 3;
   padding-top: 389px;
-  background: #d6e7f1 url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  background: #fff url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0%;
   outline: @outline;
 }
 
 .promo__title {
+  margin-bottom: 0;
+  padding: 23px 27px;
   background-color: #fff;
   font-size: 18px;
   line-height: 26px;
@@ -13,7 +17,18 @@
 }
 
 .promo__text {
+  margin: 0;
+  padding: 8px;
+  padding-bottom: 24px;
   background-color: #fff;
   line-height: 26px;
   text-transform: uppercase;
+}
+
+@media @tablet-widths {
+
+  .promo {
+    background-size: cover;
+    padding-top: 518px;
+  }
 }

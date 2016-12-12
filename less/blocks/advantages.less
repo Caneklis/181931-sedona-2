@@ -1,31 +1,129 @@
 .advantages__item {
-  padding-top: 30px;
+  padding-top: 25px;
   text-transform: uppercase;
   outline: @outline;
 
   &:nth-child(1),
-  &:nth-child(5) {
-    padding-top: 40px;
+  &:nth-child(2) {
+    text-align: center;
+    padding-top: 54px;
     background-color: @bg-blue;
     color: #fff;
   }
+
+  &:nth-child(6) {
+    text-align: center;
+    padding-top: 38px;
+    background-color: @bg-blue;
+    color: #fff;
+  }
+
+  &--hotels {
+    text-align: left;
+    padding-top: 0;
+    padding-left: 70px;
+    padding-bottom: 28px;
+    padding-top: 35px;
+}
+
+  &--souvenirs {
+    text-align: left;
+    padding-top: 0;
+    padding-left: 70px;
+    padding-bottom: 28px;
+  }
+
+  &--eat {
+    text-align: left;
+    padding-top: 0;
+    padding-left: 70px;
+    padding-bottom: 38px;
+  }
+
+  &--size,
+  &--road,
+  &--tourists {
+    background-color: #eee;
+    border-bottom: 1px solid #d6d6d6;
+    outline: none;
+  }
+
+  /*&:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5) {
+    padding-left: 70px;
+    padding-bottom: 30px;
+    text-align: left;
+  }*/
 }
 
 .advantages__title {
+  margin: 0;
+  margin-bottom: 14px;
   font-size: 18px;
   line-height: 26px;
   color: #000;
 
   &--white {
+    margin-bottom: 10px;
     color: #fff;
   }
 }
 
 .advantages__text {
-  padding-bottom: 30px;
+  margin: 0;
 
   &--white {
     padding-bottom: 40px;
+    padding-top: 15px;
     color: #fff;
   }
 }
+
+.advantages__picture {
+  background-image: url('../img/photo-city@1x.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  min-height: 260px;
+
+  &--bridge {
+    background-image: url('../img/photo-4-mobile@1x.jpg');
+  }
+}
+
+@media @tablet-widths {
+  .advantages {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;;
+  }
+
+  .advantages__item {
+    width: 33.3%;
+
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      padding-top: 0;
+    }
+
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .advantages__columns-wrap {
+    width: 33.3%;
+  }
+
+  .advantages__picture {
+    width: 66.6%;
+  }
+}
+
+
