@@ -2,33 +2,90 @@
   position: relative;
   z-index: 3;
   padding-top: 389px;
-  background: #fff url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0%;
-  outline: @outline;
+      background-image: url(../img/text-sedona-index.svg),  url(../img/bg-back-mobile@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 22%, top;
+    background-size: 90%, cover;
 }
 
 .promo__title {
+  position: relative;
   margin-bottom: 0;
-  padding: 23px 27px;
+  padding: 40px 27px 18px;
   background-color: #fff;
   font-size: 18px;
   line-height: 26px;
   color: #000;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -26px;
+    left: 0;
+    width: 100%;
+    height: 26px;
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .promo__text {
+  position: relative;
   margin: 0;
   padding: 8px;
-  padding-bottom: 24px;
+  padding-bottom: 26px;
   background-color: #fff;
   line-height: 26px;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -36px;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 @media @tablet-widths {
 
   .promo {
-    background-size: cover;
-    padding-top: 518px;
+    background-position: 50% 27%, 53% 11%;
+    background-size: 60%, 141%;
+    padding-top: 552px;
+  }
+
+  .promo__title {
+    padding: 50px 70px 20px;
+    font-size: 21px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .promo__text {
+    padding-bottom: 50px;
+
+    &::after {
+      display: none;
+    }
   }
 }
+
+@media @desktop-widths {
+
+  .promo {
+    background-position: 50% 28%, 53% 11%;
+    background-size: 38%, cover;
+  }
+
+  .promo__title {
+    padding: 50px 298px 20px;
+  }
+}
+

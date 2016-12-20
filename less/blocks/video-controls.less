@@ -1,0 +1,116 @@
+.video-controls {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -45px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.video-controls__volume {
+  position: relative;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  padding: 18px 22px;
+  box-sizing: border-box;
+}
+
+.video-controls__scale {
+  height: 3px;
+  padding: 0 22px;
+  background-color: rgba(109,96,85,0.6);
+}
+
+.video-controls__toggle {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.video-controls__repeat {
+  position: relative;
+  z-index: 5;
+  width: 50%;
+  min-height: 66px;
+  background-color: @bg-grey;
+  background-image: url('../img/icon-video-replay.svg');
+  background-repeat: no-repeat;
+  background-position: 25% 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.video-controls__subtitles {
+  position: relative;
+  z-index: 5;
+  width: 25%;
+  min-height: 66px;
+  background-color: @bg-grey;
+  background-image: url('../img/icon-video-subtitles.svg');
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.video-controls__size {
+  position: relative;
+  z-index: 5;
+  width: 25%;
+  min-height: 66px;
+  background-color: @bg-grey;
+  background-image: url('../img/icon-video-fullscreen.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+@media @tablet-widths {
+
+  .video-controls {
+    height: 93px;
+    padding: 0;
+  }
+
+  .video-controls__volume {
+    width: 70%;
+    padding: 42px 28px;
+    order: 2
+  }
+
+  .video-controls__toggle {
+    left: 31%;
+    transform: translateY(-75%);
+  }
+
+  .video-controls__repeat {
+    width: 10%;
+    order: 1;
+    background-color: rgba(0,0,0,0.6);
+  }
+
+  .video-controls__subtitles {
+    width: 10%;
+    order: 3;
+    background-color: rgba(0,0,0,0.6);
+  }
+
+  .video-controls__size {
+    width: 10%;
+    order: 4;
+    background-color: rgba(0,0,0,0.6);
+  }
+}
+
+@media @desktop-widths {
+
+  .video-controls {
+    height: 88px;
+  }
+}
