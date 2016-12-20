@@ -1,15 +1,144 @@
 .advantages-list {
   width: 100%;
+  padding-bottom: 35px;
   background-color: #fff;
   color: #000;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.advantages-list__advantage-title {
+  margin-bottom: 14px;
+  padding-top: 33px;
+  padding-left: 70px;
+  font-size: 18px;
+  line-height: 26px;
+  box-sizing: border-box;
+
+  &--souvenirs {
+    padding-top: 26px;
+  }
+}
+
+.advantages-list__advantage {
+
+  &--hotels {
+    background-image: url("../img/icon-house.svg");
+    background-repeat: no-repeat;
+    background-size: 12%;
+    background-position: 7% 23%;
+  }
+
+  &--souvenirs {
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-size: 12%;
+    background-position: 7% 23%;
+  }
+
+  &--eat {
+    background-image: url("../img/icon-burger.svg");
+    background-repeat: no-repeat;
+    background-size: 12%;
+    background-position: 7% 23%;
+  }
+}
+
+.advantages-list__advantage-text {
+  padding-left: 70px;
+  padding-right: 20px;
 }
 
 @media @tablet-widths {
 
   .advantages-list {
     display: flex;
-    padding-top: 60px;
-    padding-bottom: 68px;
+    padding-bottom: 41px;
+    text-align: center;
   }
 
+  .advantages-list__advantage {
+
+    &--hotels {
+      order: 1;
+      background-size: 30%;
+      background-position: 49% 23%;
+    }
+
+    &--souvenirs {
+      order: 3;
+      background-size: 27%;
+      background-position: 45% 22%;
+    }
+
+    &--eat {
+      order: 2;
+      background-size: 29%;
+      background-position: 44% 24%;
+    }
+  }
+
+  .advantages-list__advantage-title {
+    margin-bottom: 0;
+    padding-top: 152px;
+    padding-left: 0;
+    font-size: 21px;
+
+    &--hotels {
+      padding-right: 5px;
+    }
+
+    &--souvenirs {
+      padding-right: 17px;
+      order: 3;
+    }
+
+    &--eat {
+      padding-right: 20px;
+    }
+  }
+
+  .advantages-list__advantage-text {
+    padding: 21px 36px;
+  }
+}
+
+@media @desktop-widths {
+
+  .advantages-list__advantage {
+
+    &--hotels {
+      background-size: 18%;
+      background-position: 48% 28%;
+    }
+
+    &--souvenirs {
+      background-size: 17%;
+      background-position: 45% 26%;
+    }
+
+    &--eat {
+      background-size: 19%;
+      background-position: 44% 28%;
+    }
+  }
+
+  .advantages-list__advantage-title {
+
+    &--hotels {
+      padding-right: 10px;
+    }
+
+    &--souvenirs {
+      padding-right: 23px;
+    }
+
+    &--eat {
+      padding-right: 30px;
+    }
+  }
+
+  .advantages-list__advantage-text {
+    padding: 21px 65px;
+  }
 }

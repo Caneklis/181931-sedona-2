@@ -1,12 +1,16 @@
 .page-title {
-  margin-bottom: 22px;
+  position: relative;
+  margin-bottom: 18px;
   border-bottom: 1px solid #e5e5e5;
 }
 
 .page-title__picture {
-  padding: 48px 0 50px 0;
+  padding: 45px 0 111px 0;
   margin-bottom: 40px;
-  background: #1a3337 url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  background-image: url(../img/text-sedona.svg), url("../img/bg-intro-triangle-mobile.svg"), url(../img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 43%,bottom, 50% 100%;
+  background-size: 71%,100%, auto;
 }
 
 .page-title__title {
@@ -16,7 +20,7 @@
 }
 
 .page-title__name {
-  margin-bottom: 35px;
+  margin-bottom: 26px;
   font-size: 18px;
   line-height: 26px;
   color: #000;
@@ -25,9 +29,10 @@
 }
 
 .page-title__text {
-  padding:0 20px 30px 20px;
+  padding: 0 6px 16px 24px;
   line-height: 24px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 @media @tablet-widths {
@@ -40,10 +45,12 @@
 
   .page-title__picture {
     min-height: 290px;
-    background-size: cover;
-    background-position: 50%;
-    margin-bottom: 60px;
+    margin-bottom: 64px;
     padding-bottom: 0;
+    background-image: url(../img/text-sedona.svg), url(../img/bg-intro-triangle-mobile.svg), url(../img/bg-back-mobile@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 51%,bottom, 50% 100%;
+    background-size: 60%,101%, 137%;
   }
 
   .page-title__name {
@@ -60,3 +67,22 @@
 
 }
 
+@media @desktop-widths {
+
+  .page-title {
+    margin-bottom: 44px;
+  }
+
+
+  .page-title__picture {
+    margin-bottom: 112px;
+    background-image: url(../img/text-sedona.svg), url(../img/bg-back-mobile@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 54%, 50% 100%;
+    background-size: 38%, cover;
+  }
+
+    .page-title__text {
+    padding: 0 360px 10px;
+  }
+}

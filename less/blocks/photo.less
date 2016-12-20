@@ -1,28 +1,45 @@
 .photo {
-  padding: 0 20px;
-  outline: @outline;
+  padding-top: 16px;
+  box-sizing: border-box;
+}
+
+.photo__picture {
+  height: 280px;
+  overflow: hidden;
+}
+
+.photo__picture img {
+  display: block;
 }
 
 .photo__item {
-  margin-bottom: 22px;
+  margin-bottom: 25px;
+  padding: 0 20px;
+  padding-bottom: 17px;
   border-bottom: 1px solid #e5e5e5;
   text-align: left;
-  outline: @outline;
+  box-sizing: border-box;
+}
+
+.photo__description {
+  padding: 12px 40px 0 0;
 }
 
 .photo__title {
-  margin-bottom: 10px;
+  font-size: 14px;
   line-height: 24px;
   color: #000;
   text-transform: uppercase;
 }
 
 .photo__author {
+  margin-bottom: 8px;
   line-height: 24px;
 }
 
 .photo__like-link {
-  padding-left: 38px;
+  position: relative;/*
+  padding-left: 38px;*/
   line-height: 24px;
   font-weight: bold;
   color: #000;
@@ -39,11 +56,43 @@
   .photo__item {
     width: 50%;
     margin: 0;
+    padding: 0;
     background-color: @bg-grey;
 
     &:nth-child(1) {
       width: 100%;
     }
+  }
+
+  .photo__picture {
+    height: 267px;
+
+    &--main {
+      height: 400px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .photo__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  .photo__columns-wrap {
+    width: 60%;
+    padding: 13px 20px;
+    padding-right: 0;
+  }
+
+  .photo__like-link {
+    width: 40%;
+    padding-right: 38px;
   }
 }
 
@@ -51,6 +100,8 @@
 
   .photo {
     padding: 0;
+    background-color: #000;
+    min-height: 400px;
   }
 
   .photo__item {
@@ -60,19 +111,16 @@
       width: 100%;
     }
   }
-}
-
-@media @desktop-widths {
-
-  .photo__item {
-    background-color: #000;
-    min-height: 400px;
-  }
 
   .photo__description {
+    position: relative;
+    z-index: 10;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    margin-top: -82px;
     color: #fff;
+    background-color: rgba(0,0,0,0.5);
     box-sizing: border-box;
   }
 
@@ -81,13 +129,16 @@
   }
 
   .photo__columns-wrap {
-    width: 50%;
+    width: 70%;
+    padding-top: 18px;
+    padding-bottom: 9px;
     padding-left: 20px;
+    padding-right: 0;
     box-sizing: border-box;
   }
 
   .photo__like {
-    width: 50%;
+    width: 30%;
     padding-right: 20px;
     box-sizing: border-box;
     color: #fff;
@@ -95,6 +146,13 @@
   }
 
   .photo__like-link {
+    padding-left: 7px;
+    padding-right: 8px;
     color: #fff;
+
+    &--main {
+      padding-right: 0;
+      padding-left: 6px;
+    }
   }
 }
