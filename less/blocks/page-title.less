@@ -1,6 +1,6 @@
 .page-title {
   position: relative;
-  margin-bottom: 18px;
+  margin-bottom: 8px;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -10,7 +10,11 @@
   background-image: url(../img/text-sedona.svg), url("../img/bg-intro-triangle-mobile.svg"), url(../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position: 50% 43%,bottom, 50% 100%;
-  background-size: 71%,100%, auto;
+  background-size: 71%, cover, auto;
+
+  @media @retina {
+    background-image: url(../img/text-sedona.svg), url("../img/bg-intro-triangle-mobile.svg"), url(../img/bg-back-mobile@2x.jpg);
+  }
 }
 
 .page-title__title {
@@ -29,7 +33,7 @@
 }
 
 .page-title__text {
-  padding: 0 6px 16px 24px;
+  padding: 0 6px 26px 24px;
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -44,13 +48,17 @@
 
 
   .page-title__picture {
-    min-height: 290px;
-    margin-bottom: 64px;
+    min-height: 280px;
+    margin-bottom: 74px;
     padding-bottom: 0;
-    background-image: url(../img/text-sedona.svg), url(../img/bg-intro-triangle-mobile.svg), url(../img/bg-back-mobile@1x.jpg);
+    background-image: url(../img/text-sedona.svg), url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@1x.jpg);
     background-repeat: no-repeat;
-    background-position: 50% 51%,bottom, 50% 100%;
-    background-size: 60%,101%, 137%;
+    background-position: 50% 53%,bottom, 50% 100%;
+    background-size: 60%,100%, 100%;
+
+    @media @retina {
+      background-image: url(../img/text-sedona.svg), url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@2x.jpg);
+    }
   }
 
   .page-title__name {
@@ -70,19 +78,24 @@
 @media @desktop-widths {
 
   .page-title {
-    margin-bottom: 44px;
+    margin-bottom: 56px;
   }
 
 
   .page-title__picture {
+    min-height: 290px;
     margin-bottom: 112px;
-    background-image: url(../img/text-sedona.svg), url(../img/bg-back-mobile@1x.jpg);
+    background-image: url(../img/text-sedona.svg), url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@1x.jpg);
     background-repeat: no-repeat;
-    background-position: 50% 54%, 50% 100%;
-    background-size: 38%, cover;
+    background-position: 50% 53%,bottom, 50% 100%;
+    background-size: 38%, 101%, cover;
+
+    @media @retina {
+      background-image: url(../img/text-sedona.svg), url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@2x.jpg);
+    }
   }
 
     .page-title__text {
-    padding: 0 360px 10px;
+    padding: 0 360px;
   }
 }

@@ -3,7 +3,7 @@
 }
 
 .advantages__item {
-  padding-top: 22px;
+  padding-top: 25px;
   text-transform: uppercase;
   box-sizing: border-box;
 
@@ -86,10 +86,8 @@
 }
 
 .advantages__picture {
-  min-height: 263px;
 
   &--bridge {
-    height: 210px;
     overflow: hidden;
   }
 }
@@ -108,7 +106,7 @@
 
   .advantages__item {
     width: 33.3%;
-    padding-top: 38px;
+    padding-top: 42px;
 
     &:nth-child(1),
     &:nth-child(2) {
@@ -143,7 +141,7 @@
     margin: 0;
 
     &--white {
-      padding: 22px 50px 45px 41px;
+      padding: 22px 50px 41px 41px;
       color: #fff;
     }
 
@@ -161,8 +159,37 @@
 
 @media @desktop-widths {
 
+  .advantages__columns-wrap {
+    padding-top: 53px;
+  }
+
+  .advantages__item {
+
+    &--size,
+    &--road,
+    &--tourists {
+      padding-top: 44px;
+      padding-bottom: 36px;
+    }
+  }
+
   .advantages__title {
     padding: 0 120px;
+  }
+
+  .advantages__text {
+
+    &--grey {
+      padding: 20px 70px 30px;
+    }
+
+    &--size {
+      padding: 20px 101px 30px;
+    }
+  }
+
+  .advantages__picture {
+    height: 256px;
   }
 }
 
