@@ -46,6 +46,14 @@
   }
 }
 
+.page-footer__social-icon {
+  fill: #fff;
+
+  &:active {
+    fill: #88b6d1;
+  }
+}
+
 .page-footer__copyright {
   line-height: 26px;
   color: #000;
@@ -55,6 +63,17 @@
     display: inline-block;
     vertical-align: top;
     margin-left: 6px;
+  }
+}
+
+.page-footer__copyright-icon {
+
+  &:hover {
+    fill: #81b3d2;
+  }
+
+  &:active {
+    fill: #b2b2b2;
   }
 }
 
@@ -77,25 +96,41 @@
   .page-footer__social-list {
     width: 33.3%;
     margin: 0;
+    padding-right: 20px;
     text-align: center;
   }
 
   .page-footer__copyright {
     width: 33.3%;
     margin: 0;
+    padding-top: 14px;
     padding-right: 20px;
     text-align: right;
+    box-sizing: border-box;
   }
 }
 
 @media @desktop-widths {
 
   .page-footer {
-    padding-right: 42px;
+    padding: 35px 0 30px 0;
+  }
+
+  .page-footer__social-list {
+    padding-right: 0;
   }
 
   .page-footer__social {
-    margin-right: 40px;
+    margin: 0;
+    padding: 0;
     text-align: center;
+  }
+
+  .page-footer__copyright {
+    padding-right: 46px;
+  }
+
+  .page-footer__copyright {
+    padding-top: 11px;
   }
 }

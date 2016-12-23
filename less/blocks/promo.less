@@ -2,10 +2,14 @@
   position: relative;
   z-index: 3;
   padding-top: 389px;
-      background-image: url(../img/text-sedona-index.svg),  url(../img/bg-back-mobile@1x.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 22%, top;
-    background-size: 90%, cover;
+  background-image: url(../img/text-sedona-index.svg),  url(../img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 22%, top;
+  background-size: 90%, 240%;
+
+  @media @retina {
+    background-image: url(../img/text-sedona-index.svg),  url(../img/bg-back-mobile@2x.jpg);
+  }
 }
 
 .promo__title {
@@ -22,11 +26,12 @@
     content: "";
     position: absolute;
     top: -26px;
-    left: 0;
-    width: 100%;
-    height: 26px;
+    left: -1px;
+    width: 101%;
+    height: 27px;
     background-image: url("../img/bg-intro-triangle-mobile.svg");
     background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -54,9 +59,14 @@
 @media @tablet-widths {
 
   .promo {
-    background-position: 50% 27%, 53% 11%;
-    background-size: 60%, 141%;
+    background-image: url(../img/text-sedona-index.svg), url(../img/bg-back-tablet@1x.jpg), url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@1x.jpg);
+    background-position: 50% 27%, 76% 14%;
+    background-size: 60%, 100%;
     padding-top: 552px;
+
+    @media @retina {
+      background-image: url(../img/text-sedona-index.svg),  url(../img/bg-back-tablet@2x.jpg);
+    }
   }
 
   .promo__title {
@@ -64,7 +74,14 @@
     font-size: 21px;
 
     &::before {
-      display: none;
+      content: "";
+      position: absolute;
+      top: -57px;
+      left: 0;
+      width: 100%;
+      height: 57px;
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
+      background-repeat: no-repeat;
     }
   }
 
@@ -80,12 +97,28 @@
 @media @desktop-widths {
 
   .promo {
-    background-position: 50% 28%, 53% 11%;
-    background-size: 38%, cover;
+    background-image: url(../img/text-sedona-index.svg),  url(../img/bg-back-desktop@1x.jpg);
+    background-position: 50% 28%, 53% 14%;
+    background-size: 38%, 100%;
+
+    @media @retina {
+      background-image: url(../img/text-sedona-index.svg),  url(../img/bg-back-desktop@2x.jpg);
+    }
   }
 
   .promo__title {
     padding: 50px 298px 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -57px;
+      left: 0;
+      width: 100%;
+      height: 57px;
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
+      background-repeat: no-repeat;
+    }
   }
 }
 

@@ -52,6 +52,7 @@
   font-size: 0;
   cursor: pointer;
   border: none;
+  outline: none;
   background-color: transparent;
 }
 
@@ -131,6 +132,18 @@
   .main-nav__item {
     border: none;
     width: 20%;
+
+    &--active {
+      color: #766357;
+
+      &:hover {
+        color: #604e43;
+      }
+
+      &:active {
+        color: #b2b2b2;
+      }
+    }
 
     &:nth-child(2) {
       margin-right: 20%;
