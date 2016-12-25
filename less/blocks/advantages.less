@@ -189,7 +189,16 @@
   }
 
   .advantages__picture {
-    height: 256px;
+    height: 255px;
+    overflow: hidden;
+
+    img {
+      transform: translateY(-17%);
+    }
+
+    &--bridge img {
+      transform: translateY(-19%);
+    }
   }
 }
 
