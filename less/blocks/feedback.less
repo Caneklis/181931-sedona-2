@@ -190,13 +190,20 @@
   padding: 16px 30px;
   font-size: 20px;
   line-height: 26px;
-  letter-spacing: -1px;
   font-weight: bold;
   color: #fff;
   text-transform: uppercase;
   background-color: @bg-blue;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    .btn-hover();
+  }
+
+  &:active {
+    .btn-active();
+  }
 }
 
 .feedback__requiered-field {
@@ -362,7 +369,7 @@
   top: 75.5%;
   left: 0;
   z-index: 1000;
-  padding: 40px 0 23px;
+  padding: 0 0 23px;
   background-color: #fff;
   box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.75);
   text-align: center;
@@ -373,9 +380,11 @@
 }
 
 .feedback__success {
-  margin-bottom: 27px;
+  padding-bottom: 27px;
+  padding-top: 40px;
   font-size: 18px;
   line-height: 24px;
+  background-color: #fff;
   text-transform: uppercase;
 }
 
@@ -397,6 +406,15 @@
   font-weight: bold;
   color: #fff;
   box-sizing: border-box;
+  text-transform: uppercase;
+
+  &:hover {
+    .btn-hover();
+  }
+
+  &:active {
+    .btn-active();
+  }
 }
 
 /*pop up*/
@@ -437,7 +455,7 @@
 
     &--attractions {
       position: relative;
-      margin-bottom: 55px;
+      margin-bottom: 0;
       padding: 0 120px;
     }
 
@@ -501,6 +519,7 @@
     &--impression {
       width: 50%;
       order: 1;
+      border-right: 2px solid @bg-grey;
     }
 
     &--contacts {
@@ -524,7 +543,7 @@
     &--emotion {
       width: 100%;
       order: 5;
-      margin-bottom: 67px;
+      margin-bottom: 60px;
       padding: 0;
     }
   }
@@ -557,13 +576,14 @@
   .feedback__text-field {
     min-height: 127px;
     margin-bottom: 0;
-    padding: 15px 20px 6px;
+    padding: 15px 20px 14px;
   }
 
   .feedback__btn {
     width: 50%;
     order: 6;
-    padding: 17px 30px;
+    padding: 17px 30px 15px 19px;
+    font-size: 21px;
   }
 
   .feedback__requiered-field {
@@ -603,8 +623,10 @@
   .feedback__warning {
     position: absolute;
     top: 44px;
-    right: 20px;
-    width: 26%;
+    right: 0px;
+    width: 30%;
+    padding: 0;
+
   }
 
   .feedback__field-icon {
@@ -657,7 +679,6 @@
     width: 648px;
     z-index: 1000;
     padding: 0 0 45px;
-    background-color: #fff;
   }
 
   .feedback__success {
@@ -687,7 +708,7 @@
 @media @desktop-widths {
 
   .feedback {
-    margin-bottom: 64px;
+    margin-bottom: 67px;
     padding: 0 120px;
   }
 
@@ -702,6 +723,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       margin-top: 31px;
+      margin-bottom: 84px;
     }
 
     &--attractions {
@@ -717,6 +739,11 @@
 
   .feedback__title {
 
+    &--name {
+      margin-bottom: 43px;
+      padding-top: 0;
+    }
+
     &--contacts {
       margin-bottom: 76px;
     }
@@ -726,7 +753,9 @@
     }
 
     &--impression {
+      margin-bottom: 74px;
       padding-left: 80px;
+      padding-top: 0;
     }
   }
 
@@ -775,8 +804,8 @@
     }
 
     &--contacts {
-      width: 318px;
-      margin-right: 80px;
+      width: 30%;
+      margin-right: 0;
     }
 
     &--mail {
@@ -792,15 +821,16 @@
     }
 
     &--phone {
-      width: 80px;
+      width: 17%;
       margin-left: 0;
       order: 2;
     }
 
     &--mail {
-      width: 150px;
-      margin-right: 14px;
+      width: 20%;
+      margin-right: 0;
       order: 4;
+      text-align: right;
     }
   }
 
@@ -810,7 +840,7 @@
 
   .feedback__warning {
     top: 63px;
-    left: 84px;
+    left: 106px;
   }
 
   .feedback__field {
@@ -864,12 +894,16 @@
     }
   }
 
+  .feedback__btn {
+    padding: 17px 18px 15px 19px;
+  }
+
   .feedback__field-icon {
     order: 6;
 
     &::before {
       top: 106px;
-      left: 342px;
+      left: 393px;
     }
 
     &::after {

@@ -4,6 +4,7 @@
 }
 
 .photo__picture {
+  display: block;
   height: 280px;
   overflow: hidden;
 }
@@ -66,6 +67,10 @@
     &:nth-child(1) {
       width: 100%;
     }
+
+    &--dark {
+      background-color: #eaeaea;
+    }
   }
 
   .photo__picture {
@@ -96,17 +101,21 @@
   }
 
   .photo__like {
-    padding-bottom: 3px;
+    padding-bottom: 0;
   }
 
   .photo__like-link {
     width: 40%;
-    padding-right: 34px;
-    padding-left: 5px;
+    padding-right: 30px;
+    padding-left: 6px;
 
     &--main {
       padding-right: 20px;
-    padding-left: 8px;
+      padding-left: 8px;
+    }
+
+    &--dark {
+      padding-right: 37px;
     }
   }
 }
@@ -114,6 +123,7 @@
 @media @desktop-widths {
 
   .photo {
+    justify-content: space-between;
     min-height: 400px;
     margin-top: 70px;
     padding: 0;
@@ -134,7 +144,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: -82px;
+    margin-top: -78px;
     color: #fff;
     background-color: rgba(0,0,0,0.5);
     box-sizing: border-box;
@@ -146,8 +156,8 @@
 
   .photo__columns-wrap {
     width: 70%;
-    padding-top: 18px;
-    padding-bottom: 9px;
+    padding-top: 13px;
+    padding-bottom: 8px;
     padding-left: 20px;
     padding-right: 0;
     box-sizing: border-box;
@@ -155,8 +165,9 @@
 
   .photo__like {
     width: 30%;
-    padding-top: 6px;
-    padding-right: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 21px;
     box-sizing: border-box;
     color: #fff;
     text-align: right;

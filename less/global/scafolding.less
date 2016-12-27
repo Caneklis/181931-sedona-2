@@ -4,6 +4,7 @@ body {
   line-height: 21px;
   font-style: normal;
   color: #333333;
+  background-color: @bg-grey;
 }
 
 img {
@@ -30,6 +31,7 @@ a {
 input,
 button {
   border: none;
+  font-family: 'PT Sans', Arial, sans-serif;
 }
 
 input[type="text"],
@@ -40,6 +42,14 @@ textarea {
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
 }
 
 /** {
